@@ -82,7 +82,7 @@ namespace SvToolGui
                         continue;
 
                     // in the .osu file format, sv is written as -100 / actual_sv, so the lower it is, the faster u go
-                    if (timingPoint.Offset > startTime && timingPoint.Offset <= endTime)
+                    if (timingPoint.Offset >= startTime && timingPoint.Offset < endTime)
                         timingPoint.BeatLength /= multiplier;
                 }
 
